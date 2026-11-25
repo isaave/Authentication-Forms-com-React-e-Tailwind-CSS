@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+/* Paleta extraída da imagem de referência (Authentication UI). */
+@theme {
+  --font-sans: 'Nunito', ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #000813;
+  --color-card: #00162e;
+  --color-field: #00193a;
+  --color-edge: #01274e;
+  --color-accent: #ffd50a;
+  --color-title: #e7edf4;
+  --color-text: #afc2d4;
+  --color-muted: #7b96b2;
+  --color-olive: #3a3612;
+  --color-olive-dark: #1e2014;
+
+  --radius-card: 0.75rem;
+  --shadow-card: 0 24px 48px -24px rgb(0 0 0 / 0.9);
+}
+
+@layer base {
+  body {
+    @apply bg-canvas font-sans text-title antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
